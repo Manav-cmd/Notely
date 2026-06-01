@@ -1,0 +1,29 @@
+# Dependencies
+**/node_modules/
+**/dist/
+frontend/dist/
+
+# Java Build Files
+**/target/
+backend/target/
+**/bin/
+
+# Local database & uploads
+**/data/
+backend/data/
+**/uploads/
+backend/uploads/
+
+# IDE files
+**/.idea/
+**/.vscode/
+*.iml
+*.iws
+**/.classpath
+**/.project
+**/.settings/
+
+# Environment configurations
+**/.env
+**/.env.local
+**/.env.production
