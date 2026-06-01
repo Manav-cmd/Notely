@@ -1,0 +1,43 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: notely
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:file:./data/notelydb_new;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;AUTO_SERVER=TRUE}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+  h2:
+    console:
+      enabled: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:mock-key-not-configured}
+      base-url: ${OPENAI_BASE_URL:https://apihub.agnes-ai.com}
+      chat:
+        options:
+          model: ${OPENAI_MODEL:agnes-2.0-flash}
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:9a4f2c8d3e7b1a5f6g8h0i2j4k6l8m0n2o4p6q8r0s2t4u6v8w0x2y4z6a8b0c2d}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000} # 24 Hours
+  file:
+    storage-dir: ${FILE_STORAGE_DIR:./uploads}
+
+logging:
+  level:
+    org.springframework.security: INFO
+    com.notely: INFO
