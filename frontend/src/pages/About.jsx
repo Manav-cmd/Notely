@@ -10,7 +10,9 @@ const About = () => {
       <main className="main-content" style={{ padding: '2.5rem' }}>
         {/* Hero Header */}
         <header style={{ textAlign: 'center', marginBottom: '3.5rem', marginTop: '1rem' }}>
-          <div style={{ fontSize: '3rem', marginBottom: '1rem', animation: 'float 4s ease-in-out infinite' }}>📝</div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '80px', height: '80px', borderRadius: '50%', background: 'var(--accent-light)', color: 'var(--accent-primary)', marginBottom: '1.5rem', boxShadow: '0 0 20px rgba(99,102,241,0.25)', animation: 'pulseGlow 3s infinite' }}>
+            <Sparkles size={40} />
+          </div>
           <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', background: 'var(--accent-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             About Notely
           </h1>

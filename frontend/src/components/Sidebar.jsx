@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import api from '../services/api';
-import { LayoutDashboard, FileText, Search, BarChart3, User, LogOut, Sun, Moon, Plus, Info } from 'lucide-react';
+import { LayoutDashboard, FileText, Search, BarChart3, User, LogOut, Sun, Moon, Plus, Info, Sparkles } from 'lucide-react';
 
 const Sidebar = ({ onWorkspaceChange }) => {
   const { logout } = useAuth();
@@ -66,7 +66,8 @@ const Sidebar = ({ onWorkspaceChange }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <span>📝 Notely</span>
+        <Sparkles size={24} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />
+        <span>Notely</span>
       </div>
 
       <div style={{ marginBottom: '1.5rem', padding: '0 0.5rem' }}>

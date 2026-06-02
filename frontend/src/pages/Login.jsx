@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Lock, Mail, User, AlertCircle } from 'lucide-react';
+import { Lock, Mail, User, AlertCircle, Sparkles } from 'lucide-react';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -42,7 +42,9 @@ const Login = () => {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-header">
-          <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>📝</div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '64px', height: '64px', borderRadius: '50%', background: 'var(--accent-light)', color: 'var(--accent-primary)', marginBottom: '1rem', boxShadow: '0 0 15px rgba(99,102,241,0.2)' }}>
+            <Sparkles size={32} />
+          </div>
           <h2 className="auth-title">{isLogin ? 'Welcome Back' : 'Get Started'}</h2>
           <p className="auth-subtitle">
             {isLogin ? 'Log in to manage your smart knowledge base' : 'Register a new account to start taking notes'}
