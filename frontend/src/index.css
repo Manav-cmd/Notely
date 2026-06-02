@@ -93,15 +93,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  overflow-x: hidden;
   line-height: 1.6;
   transition: background-color var(--transition-normal), color var(--transition-normal);
   position: relative;
-  min-height: 100vh;
 }
 
 /* Cosmic Animated Orbs */
@@ -635,7 +639,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: radial-gradient(circle at center, var(--bg-tertiary) 0%, var(--bg-primary) 100%);
+  background-image: linear-gradient(rgba(3, 5, 12, 0.5), rgba(3, 5, 12, 0.7)), url('/login-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
